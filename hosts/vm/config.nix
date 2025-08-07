@@ -1,20 +1,17 @@
 {
-    let 
-        module = "../../modules/nixos"
-    in
         imports = [
             # Hardware
             ./hardware-configuration.nix
 
             # Module
-            ${module}/audio.nix
-            ${module}/boot.nix
-            ${module}/network.nix
-            ${module}/nix.nix
-            ${module}/timezome.nix
-            ${module}/user.nix
-            ${module}/zram.nix
-            ${module}/vm.nix
+            ../../modules/nixos/audio.nix
+            ../../modules/nixos/boot.nix
+            ../../modules/nixos/network.nix
+            ../../modules/nixos/nix.nix
+            ../../modules/nixos/timezome.nix
+            ../../modules/nixos/user.nix
+            ../../modules/nixos/zram.nix
+            ../../modules/nixos/vm.nix
 
         ];
 }

@@ -9,15 +9,10 @@
             enable = true;
             wayland.enable = true;
         };
-        sessionPackages = with pkgs; [
-            sway
-            lxqt
-            openbox
-        ];
+        defaultSession = "sway";
     };
-    # lxqt + openbox
+    # lxqt
     desktopManager.lxqt.enable = true;
-    windowManager.openbox.enable = true;
   };
 
   # Sway as Wayland window manager
@@ -37,16 +32,4 @@
     Exec=sway
     Type=Application
   '';
-
-  environment.etc."xdg/sessions/openbox.desktop".text = ''
-    [Desktop Entry]
-    Name=LXQt
-    Exec=startlqxt
-    Type=Application
-  '';
-
-
-  # Optional: start Sway by default in SDDM
-  # If SDDM allows default session selection, it will pick sway.desktop
-  # You can also set this per-user (see below)
 }

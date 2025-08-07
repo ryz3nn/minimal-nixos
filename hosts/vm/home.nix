@@ -3,7 +3,7 @@
   ];
 
   home = {
-    username = derek;
+    username = "derek";
     homeDirectory = "/home/derek";
     stateVersion = "25.05";
   };
@@ -19,6 +19,7 @@
 
     # Desktop app
         wezterm
+        firefox
   ];
   
 }
