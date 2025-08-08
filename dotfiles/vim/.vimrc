@@ -41,5 +41,5 @@ set hlsearch        " Highlight matches
 set wildmenu
 
 " Set colorscheme (optional, change or remove if not installed)
-colorscheme desert
+"colorscheme desert
 

@@ -1,6 +1,4 @@
-{ config, pkgs, ... }: {
-imports = [
-];
+{ config, pkgs, ... }: { imports = [ ];
 
 home = {
   username = "derek";
@@ -20,14 +18,13 @@ home.packages = with pkgs; [
   tree 
 
 # Desktop app
-  #wezterm
   firefox
 
 # WM ultilities
-  waybar
-  slurp
-  mako 
-  wl-clipboard 
+  dunst
+  dmenu
+  feh
+  i3status
   yazi
   
 ];
@@ -42,8 +39,11 @@ xdg.configFile = {
 "zsh" = {
   source = config.lib.file.mkOutOfStoreSymlink "/home/derek/minimal-nixos/dotfiles/zsh/.config/zsh";  recursive = true; 
 };
-"sway/config" = {
-  source = config.lib.file.mkOutOfStoreSymlink "/home/derek/minimal-nixos/dotfiles/zsh/.config/sway/config";
+"i3/config" = {
+  source = config.lib.file.mkOutOfStoreSymlink "/home/derek/minimal-nixos/dotfiles/i3/.config/i3/config";
+ };
+"i3status/config" = {
+  source = config.lib.file.mkOutOfStoreSymlink "/home/derek/minimal-nixos/dotfiles/i3/.config/i3status/config";
  };
 };
 }
