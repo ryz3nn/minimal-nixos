@@ -26,13 +26,12 @@ PS1="%{$fg[cyan]%}%n@%m %{$fg[green]%}%~ %{$fg[green]%}❯ %{$reset_color%}"
 # Plugin
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# Aliases folder
-alias dwmdir="cd $HOME/dotfiles/suckless/dwm"
-alias scriptsdir="cd $HOME/dotfiles/scripts"
-alias shortcut="vim $HOME/dotfiles/sxhkd/.config/sxhkd/sxhkdrc"
-alias suckless="cd $HOME/dotfiles/suckless"
+# fzf
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
 
 # Aliases command
 alias reload='source ~/.zshrc'
@@ -44,3 +43,8 @@ alias grep='grep --color=auto'
 alias toggle_ibus='$HOME/dotfiles/scripts/toggle_ibus.sh'
 alias autoupdate="$HOME/dotfiles/scripts/install.sh"
 alias modupdate="vim $HOME/dotfiles/scripts/install.sh"
+
+# NixOS aliases
+alias vm='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#vm'
+alias delgen='sudo nix-env --delete-generations old && nix-collect-garbage -d'
+

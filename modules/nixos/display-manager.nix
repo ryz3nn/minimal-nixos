@@ -16,8 +16,9 @@
   };
 
   # Sway as Wayland window manager
-  programs.sway.enable = true;
-
+  programs.sway = {
+    enable = true;
+ };
   # Needed for Openbox to work properly
   environment.systemPackages = with pkgs; [
     lxappearance
@@ -32,4 +33,10 @@
     Exec=sway
     Type=Application
   '';
+ 
+# Environment variable
+environment.sessionVariables = {
+  WLR_NO_HARDWARE_CURSORS = "1";
+  MOZ_ENABLE_WAYLAND = "1";
+};
 }
