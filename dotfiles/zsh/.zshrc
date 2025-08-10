@@ -46,5 +46,5 @@ alias modupdate="vim $HOME/dotfiles/scripts/install.sh"
 
 # NixOS aliases
 alias vm='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#vm'
-alias delgen='sudo nix-env --delete-generations old && sudo nix-collect-garbage -d'
+alias clean='sudo nix-env --delete-generations old && sudo nix-collect-garbage -d'
 

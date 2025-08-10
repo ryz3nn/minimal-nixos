@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: { imports = [ ];
+{ config, pkgs, ... }: { 
+
+imports = [ ];
 
 home = {
   username = "derek";
@@ -19,6 +21,8 @@ home.packages = with pkgs; [
 
 # Desktop app
   firefox
+  vivaldi
+  warpd
 
 # WM ultilities
   dunst
@@ -26,7 +30,9 @@ home.packages = with pkgs; [
   feh
   i3status
   yazi
-  
+
+# Random stuffs
+  xorg.xev # Event listener  
 ];
  
 # Dotfiles
@@ -44,6 +50,9 @@ xdg.configFile = {
  };
 "i3status/config" = {
   source = config.lib.file.mkOutOfStoreSymlink "/home/derek/minimal-nixos/dotfiles/i3/.config/i3status/config";
+ };
+"warpd/config" = {
+  source = config.lib.file.mkOutOfStoreSymlink "/home/derek/minimal-nixos/dotfiles/warpd/.config/warpd/config";
  };
 };
 }
