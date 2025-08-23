@@ -1,45 +1,30 @@
-" Enable line numbers
-set number
-
-" Highlight current line
-set cursorline
-
-" Enable syntax highlighting
-syntax on
-" No backup file 
+" General
+set history=10000
 set noswapfile
 set nobackup
 
-" Set indentation
+syntax off
+set number
+set wrap
+set cursorline
+
 set tabstop=2       " Number of spaces a tab counts for
 set shiftwidth=2    " Number of spaces to use for autoindent
 set expandtab       " Convert tabs to spaces
 set smartindent
 
-" Enable line wrapping
-set wrap
-
-" Show matching brackets
-set showmatch
-
-" Enable mouse support
-"set mouse=a
-
-" Enable clipboard access (requires +clipboard build)
 set clipboard=unnamedplus
-
-" Set a better backspace behavior
 set backspace=indent,eol,start
 
-" Search settings
+set showmatch
 set ignorecase      " Case-insensitive search
 set smartcase       " But case-sensitive if you use capital letters
 set incsearch       " Show matches while typing
 set hlsearch        " Highlight matches
 
-" Better command line completion
 set wildmenu
+set showcmd
+set laststatus=2 " Always show the statusline
+set statusline=%f\ %h%m%r%=%b\ %l,%c%V\ %P " Basic statusline displaying file name, flags, byte/line/column info, and percentage
 
-" Set colorscheme (optional, change or remove if not installed)
-"colorscheme desert
-
+" Customize

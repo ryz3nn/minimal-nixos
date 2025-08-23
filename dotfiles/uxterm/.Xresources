@@ -1,0 +1,8 @@
+xterm*disallowedWindowOps: 20,21,SetXprop
+xterm*font:     *-fixed-*-*-*-18-*
+
+! adds more familiar copy-paste shortcuts
+xterm*selectToClipboard: true
+xterm*VT100*translations: #override \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> C: select-end(CLIPBOARD)
