@@ -1,4 +1,5 @@
 {
+  
   description = "Multi-host NixOS + standalone Home Manager (loop version)";
 
   inputs = {
@@ -10,7 +11,7 @@
   outputs = { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
-      hosts = [ "vm" "pc" ];
+      hosts = [ "vm" "pc" "lap"];
     in {
       nixosConfigurations = builtins.listToAttrs (builtins.map (name: {
         name = name;

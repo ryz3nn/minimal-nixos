@@ -47,5 +47,6 @@ alias modupdate="vim $HOME/dotfiles/scripts/install.sh"
 # NixOS aliases
 alias vm='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#vm'
 alias pc='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#pc'
-alias clean='sudo nix-env --delete-generations old && sudo nix-collect-garbage -d'
+alias lap='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#lap'
+alias clean='sudo nix-env --delete-generations old && sudo nix-collect-garbage --delete-older-than 7d'
 alias phone='scrcpy --turn-screen-off --stay-awake --power-off-on-close'
