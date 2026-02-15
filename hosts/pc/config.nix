@@ -5,7 +5,7 @@
 
             # Module
             ../../modules/nixos/audio.nix
-            ../../modules/nixos/boot.nix
+            ../../modules/nixos/boot-uefi.nix
             ../../modules/nixos/network.nix
             ../../modules/nixos/nix.nix
             ../../modules/nixos/timezone.nix
