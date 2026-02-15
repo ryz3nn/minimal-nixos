@@ -6,7 +6,7 @@
             # Module
             #../../modules/nixos/vm.nix
             ../../modules/nixos/audio.nix
-            ../../modules/nixos/boot.nix
+            ../../modules/nixos/boot-mbr.nix
             ../../modules/nixos/network.nix
             ../../modules/nixos/nix.nix
             ../../modules/nixos/timezone.nix
