@@ -48,5 +48,6 @@ alias modupdate="vim $HOME/dotfiles/scripts/install.sh"
 alias vm='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#vm'
 alias pc='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#pc'
 alias lap='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#lap'
-alias clean='sudo nix-env --delete-generations old && sudo nix-collect-garbage --delete-older-than 7d'
+alias clean='sudo nix-env --delete-generations old && sudo nix-collect-garbage --delete-older-than 2d'
 alias phone='scrcpy --turn-screen-off --stay-awake --power-off-on-close'
+alias pmbootstrap='python ~/postmarketos/pmbootstrap/pmbootstrap.py'

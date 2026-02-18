@@ -7,11 +7,13 @@ syntax off
 set number
 set relativenumber
 set wrap
+
 " set cursorline
 set hidden " Change buffer without save
 set foldmethod=indent
 set nofoldenable
-
+set cursorline
+set mouse=a
 set tabstop=2       " Number of spaces a tab counts for
 set shiftwidth=2    " Number of spaces to use for autoindent
 set expandtab       " Convert tabs to spaces

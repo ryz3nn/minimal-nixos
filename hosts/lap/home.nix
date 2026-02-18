@@ -6,7 +6,7 @@ imports = [
 home = {
   username = "derek";
   homeDirectory = "/home/derek";
-  stateVersion = "25.05";
+  stateVersion = "25.11";
 };
 
 home.packages = with pkgs; [
@@ -24,7 +24,10 @@ home.packages = with pkgs; [
   ctags
   tmux
   unzip
-  
+  python315
+  multipath-tools
+  openssl
+  inetutils
 
 # Desktop app
   firefox
@@ -34,7 +37,9 @@ home.packages = with pkgs; [
   stretchly
   pavucontrol
   xsct
-  parsec-bin
+  gnumake
+  gcc
+  dtc
 
 # WM ultilities
   dunst
@@ -48,6 +53,7 @@ home.packages = with pkgs; [
   xclip
   volumeicon
   pasystray
+  heimdall # Samsung boot
 
 
 # Random stuffs
