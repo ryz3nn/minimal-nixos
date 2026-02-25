@@ -12,6 +12,11 @@ home = {
 home.packages = with pkgs; [
 
 # Dev
+  python315
+  nodejs_24
+  gnumake
+  gcc
+  dtc
 
 # CLI
   git
@@ -24,7 +29,6 @@ home.packages = with pkgs; [
   ctags
   tmux
   unzip
-  python315
   multipath-tools
   openssl
   inetutils
@@ -37,9 +41,6 @@ home.packages = with pkgs; [
   stretchly
   pavucontrol
   xsct
-  gnumake
-  gcc
-  dtc
 
 # WM ultilities
   dunst
@@ -53,7 +54,8 @@ home.packages = with pkgs; [
   xclip
   volumeicon
   pasystray
-  heimdall # Samsung boot
+  ncdu # Disk analyze
+  mosh # ssh alternative
 
 
 # Random stuffs

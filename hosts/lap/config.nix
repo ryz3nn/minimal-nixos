@@ -15,6 +15,7 @@
             ../../modules/nixos/display-manager.nix
             ../../modules/nixos/graphic.nix
             ../../modules/nixos/bluetooth.nix
+            ../../modules/nixos/keyboard.nix
 
         ];
 }

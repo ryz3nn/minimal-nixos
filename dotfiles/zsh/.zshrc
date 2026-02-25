@@ -51,3 +51,4 @@ alias lap='sudo nixos-rebuild switch --flake /home/derek/minimal-nixos#lap'
 alias clean='sudo nix-env --delete-generations old && sudo nix-collect-garbage --delete-older-than 2d'
 alias phone='scrcpy --turn-screen-off --stay-awake --power-off-on-close'
 alias pmbootstrap='python ~/postmarketos/pmbootstrap/pmbootstrap.py'
+
