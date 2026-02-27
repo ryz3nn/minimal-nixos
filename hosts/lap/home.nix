@@ -13,10 +13,10 @@ home.packages = with pkgs; [
 
 # Dev
   python315
-  nodejs_24
   gnumake
   gcc
   dtc
+  go
 
 # CLI
   git
@@ -55,7 +55,7 @@ home.packages = with pkgs; [
   volumeicon
   pasystray
   ncdu # Disk analyze
-  mosh # ssh alternative
+  usbutils 
 
 
 # Random stuffs
@@ -93,7 +93,9 @@ programs.git = {
   enable = true;
   userName = "derek";
   userEmail = "derek@nixos.none";
-};
+  extraConfig = {
+    credential.helper = "store";
+  };};
 }
 
 

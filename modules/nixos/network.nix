@@ -1,4 +1,5 @@
 {
+  hardware.enableAllFirmware = true;
   networking.networkmanager = { 
     enable = true;
     unmanaged = [
@@ -9,7 +10,6 @@
   networking.wireless.enable = true;
   networking.wireless.networks = {
     "BIN BOP".psk = "999999999";
-    "P 2402-5G".psk = "22112005";
-
+    "P 2402".psk = "22112005";
   };
 }

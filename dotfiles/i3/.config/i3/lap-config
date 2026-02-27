@@ -7,14 +7,14 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 
-exec --no-startup-id setxkbmap us -option ctrl:nocaps
-exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id setxkbmap us 
 exec --no-startup-id thunar --daemon 
 exec --no-startup-id nm-applet
 exec --no-startup-id warpd
-exec --no-startup-id stretchly
+#exec --no-startup-id stretchly
 exec --no-startup-id xsct 4500 0.7
 exec --no-startup-id pasystray
+exec --no-startup-id xmodmap ~/.Xmodmap
 
 exec feh --bg-scale "/home/derek/minimal-nixos/wallpapers/mononoke.jpg"
 
@@ -33,7 +33,7 @@ for_window [title="Save File"] floating enable, resize set 800 600, move positio
 # Workspace
 
 #======My shortcut====
-bindsym $mod+Shift+b exec "i3-msg 'workspace 2; exec chromium'"
+bindsym $mod+Shift+b exec "i3-msg 'workspace 3; exec chromium'"
 bindsym $mod+Shift+p exec "i3-msg 'workspace 3; exec chromium --incognito'"
 bindsym $mod+e exec $term  thunar
 bindsym $mod+Shift+Return exec $term -class dropdown
